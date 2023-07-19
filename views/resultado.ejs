@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resultado da Consulta</title>
+</head>
+<body>
+
+  <h1>Resultado da Consulta</h1>
+
+  <% if (resultado.length > 0) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Tamanho</th>
+          <th>Cor</th>
+          <th>Preco</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% resultado.forEach(function(produto) { %>
+          <tr>
+            <td><%= produto.nome %></td>
+            <td><%= produto.preco %></td>
+            <td><%= produto.categoria %></td>
+            <td><%= produto.descricao %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <p>Nenhum resultado encontrado.</p>
+  <% } %>
+
+  <footer>
+    <p>&copy; 2023 Meu Site de Roupas Infantis</p>
+  </footer>
+</body>
+</html>
