@@ -1,0 +1,14 @@
+{
+  "name": "estilo-infantil",
+  "version": "1.0.0",
+  "description": "roupas infantis",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
+
+  

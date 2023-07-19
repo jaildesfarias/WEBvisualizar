@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Estilo Infantil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300;400&display=swap"
+        rel="stylesheet" />
+        
+    <style>
+    *,
+        *::before,
+        *::after {
+            margin: 0;
+        }
+        
+   body {background-color:hsl(0, 0%, 99%);
+          align-items: center;
+          background-image: url("fundo.jpg");
+          background-attachment: fixed;
+           background-repeat: no-repeat;
+          background-size: cover;
+         
+   }
+   
+    h1 { 
+         color: rgba(8, 0, 0, 0.774); 
+         font-size: 80px ;
+           
+         }
+
+     h2 {
+        
+          font-size: 20px ;
+          align-items: center;
+      }
+      h5{
+        color: #140e0e;
+
+      }
+
+.content{
+    margin-top: 15pt;
+}
+.field-title {
+    font-weight: 400;
+}
+
+.field-value {
+    color: #0f0101;
+    font-weight: 200;
+
+}
+      div#topo {
+            height: 140px;
+            background-color: rgba(178, 210, 224, 0.856);
+        }
+       
+        div#rodape footer {
+            width: 992px;
+            margin-right: auto;
+            margin-left: auto;
+       
+        }
+
+        div#rodape {
+            background-color: #3c912bab;
+            padding: 3em;
+            height: 25vh;
+        }
+            .limpar {
+                    clear: both;
+                    cursor: pointer;
+                    }
+        p{
+            color: #0e0606;
+        }
+        
+    </style>
+</head>
+<body>
+  <br>
+    <div class = "card-panel teal lighten-2 ">
+        <h5 class="center-align"></h5> 
+      </div>
+    <div id="topo">
+        <header>
+            <h2 Align="center">
+            <script src="cart.js"></script>
+            <hr>
+              <h1 style="text-align: center; font-family:cursive;" >Seja Bem vindo(a) ao Estilo Infantil</h1>
+        </header></h2>
+    </div><hr><br><br></body><br>
+    <br><br><br><br>
+    <p style="text-align: center; font-size: 25px; margin-left: 30px; font-family:cursive;">Procurando Roupas Para Seu(a) Pequeno (a) com Ótimos Preços?<br>
+         Visite Nossa Loja e Confira. Para Andar na Moda,<br>
+         Moda Infantil é Sua Loja de Roupas Online</p>
+        <h2 Align="center">
+  <section>       
+
+          
+            <h1 style="color: rgba(7, 18, 22, 0.856);font-family:cursive; font-size: 35px;"></h1>
+            <br>
+            <div class="select-container">
+              <select  style="cursor: pointer; width: 20%; padding: 10px; font-size: 16px; font-family: cursive;" name="busca" id="busca">
+                <option value="text">Você Buscou Por "Roupa Infantil"</option>
+                <option value="menina">Roupa Infantil para Meninas</option>
+                <option value="menino">Roupa Infantil para Meninos</option>
+                <option value="outros">Roupa Infantil para Outros</option>
+              </select>
+     <br>
+      </div>
+  
+     <input 
+     style="width: 30%;
+     padding: 10px;
+     font-size: 16px;" type="text" id="input-text">
+        <button style="cursor: pointer; width: 5%; padding: 10px; font-size: 16px;" onclick="addText()">Enviar</button>
+        <div id="text-list"></div>
+        <script>
+          function validaForm() {
+            alert("Formulário enviado com sucesso!");
+            var confirmacao = confirm("Deseja excluir o item selecionado?");
+            
+            if (confirmacao) {
+        
+              alert("Item excluído com sucesso!");
+            }
+          }
+        </script>
+        
+    <script>
+      
+        function addText() {
+          var inputText = document.getElementById('input-text').value;
+          if (inputText !== '') {
+            var textContainer = document.createElement('div');
+            textContainer.classList.add('text-container');
+    
+            var text = document.createElement('span');
+            text.classList.add('text');
+            text.innerText = inputText;
+    
+            var deleteIcon = document.createElement('span');
+            deleteIcon.classList.add('icons');
+            deleteIcon.innerHTML = '&#10060;';
+            deleteIcon.onclick = function() {
+              textContainer.remove();
+            };
+    
+            var editIcon = document.createElement('span');
+            editIcon.classList.add('icons');
+            editIcon.innerHTML = '&#9998;';
+            editIcon.onclick = function() {
+              document.getElementById('input-text').value = text.innerText;
+              textContainer.remove();
+            };
+    
+            textContainer.appendChild(text);
+            textContainer.appendChild(deleteIcon);
+            textContainer.appendChild(editIcon);
+    
+            document.getElementById('text-list').appendChild(textContainer);
+            document.getElementById('input-text').value = '';
+          }
+        }
+
+
+</script> 
+</body>
+</html>
